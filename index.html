@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./styles.css" rel="stylesheet" />
+    <title>Facebook Login</title>
+  </head>
+  <body data-logged="false">
+    <div class="user-container">
+      <img class="user-picture" src="" alt="user picture" />
+      <div class="user-name"></div>
+      <div class="user-email"></div>
+      <img class="user-login" src="./unDraw-secure-login.png" alt="User Login" />
+    </div>
+    <button class="fb-button fb-login">
+      Login with Facebook
+    </button>
+    <button class="fb-button fb-logout">
+      Logout from Facebook
+    </button>
+    <script async defer src="https://connect.facebook.net/en_US/sdk.js"></script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>

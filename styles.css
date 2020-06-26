@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  --fb-color: rgb(63, 103, 178);
+  --fb-text-color: rgb(255, 255, 255);
+}
+
+body {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  min-height: 460px;
+}
+
+.fb-button {
+  width: 200px;
+  height: 50px;
+  background-color: var(--fb-color);
+  font-size: 14px;
+  color: var(--fb-text-color);
+  border-radius: 6px;
+  border: none;
+  display: none;
+  margin-top: 50px;
+}
+
+.fb-button:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+body[data-logged='false'] .fb-login {
+  display: block;
+}
+
+body[data-logged='true'] .fb-logout {
+  display: block;
+}
+
+img.user-login {
+  height: 283px;
+  display: none;
+}
+
+.user-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+body[data-logged='false'] .user-container * {
+  display: none;
+}
+
+body[data-logged='false'] .user-container .user-login {
+  display: inline;
+}
+
+.user-picture {
+  border: 2px solid #eee;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+}
+
+.user-name {
+  font-size: 18px;
+  color: #333;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+.user-email {
+  font-size: 16px;
+  color: #666;
+  margin-top: 14px;
+}
